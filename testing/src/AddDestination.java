@@ -16,7 +16,7 @@ public class AddDestination {
         String country = scanner.nextLine();
 
         try {
-            FileWriter fw = new FileWriter("Destination.csv", true);
+            FileWriter fw = new FileWriter("\src Destination.csv", true);
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write(city + "," + country);
             bw.newLine();
