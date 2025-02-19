@@ -31,7 +31,7 @@ public class Destination {
         List<Search> searches = new ArrayList<>();
 
         try {
-            FileReader fr = new FileReader("Destination.csv");
+            FileReader fr = new FileReader("\src Destination.csv");
             BufferedReader br = new BufferedReader(fr);
             String data;
 
