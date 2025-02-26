@@ -3,8 +3,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Menu {
+class Menu {
     public static final String DESTINATION_FILE = "Destination.csv";
+    private static final ListTravelPlan listTravelPlan = new ListTravelPlan();
 
     static void displayMenu(Scanner scanner) {
         while (true) {
@@ -12,7 +13,8 @@ public class Menu {
             System.out.println("1. View Destinations");
             System.out.println("2. Add Destinations");
             System.out.println("3. Delete Destinations");
-            System.out.println("4. Exit");
+            System.out.println("4. List Travel Plans");
+            System.out.println("5. Exit");
             System.out.print("Please choose an option: ");
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
@@ -24,12 +26,16 @@ public class Menu {
                 case 2:
                     addDestination(scanner);
                     break;
+                case 4:
+                    listTravelPlan.listing(scanner);
+                    break;
                 case 3:
                     deleteDestination();
                     break;
-                case 4:
+                case 5:
                     System.out.println("Exiting the application. Goodbye!");
                     return;
+
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }

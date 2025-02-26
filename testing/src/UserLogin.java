@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class UserLogin {
-    public static void startLogin(Scanner scanner) {
+    public void StartLogin(Scanner scanner) {
         while (true) {
             System.out.print("Please enter your username: ");
             String name = scanner.nextLine().trim();
